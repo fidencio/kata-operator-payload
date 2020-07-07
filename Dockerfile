@@ -1,4 +1,5 @@
-FROM centos:8.2.2004 as katapackages
+ARG ARCH=amd64
+FROM ${ARCH}/centos:8.2.2004 as katapackages
 
 ADD CentOS-8-Virt-SIG-Advanced-Virtualization.repo /etc/yum.repos.d/CentOS-8-Virt-SIG-Advanced-Virtualization.repo
 ADD CentOS-8-Virt-SIG-Kata-Containers.repo /etc/yum.repos.d/CentOS-8-Virt-SIG-Kata-Containers.repo
